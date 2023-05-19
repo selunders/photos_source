@@ -22,9 +22,14 @@ function minifyPhotos(){
 
 class PhotoData {
     constructor(){
+        // this.url = url
         this.title = "";
         this.description = "";
     }
+    // function UpdateURL(url)
+    // {
+    //     this.url = url;
+    // }
 }
 
 function createPhotoData(){
@@ -43,10 +48,14 @@ function createPhotoData(){
         {
             photoData[photo] = new PhotoData(photo);
         }
+        else
+        {
+            photoData[photo].up
+        }
     });
     console.log(photoData);
     fs.writeFileSync('./js/imageData.json', JSON.stringify(photoData));
 }
 
-minifyPhotos();
+// minifyPhotos();
 createPhotoData();

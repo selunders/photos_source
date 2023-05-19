@@ -4,14 +4,19 @@ doctype html
 html(lang="en")
     include _includes/head.pug
     body 
-        //- include _includes/header.pug
+        include _includes/header.pug
         main.home 
             section.hero 
             section.photos
                 //- - let photos = fs.readdirSync('./img/home/');
-                - console.log(photos)
-                //- -
-                //-     for(let photo in photos)
-                //-     {
-                //-         p - `${photo}`
-                //-     }
+                each photo in Object.keys(photoData)
+                    //- - console.log(photo)
+                    img(src=`${photosPath}/${photo}`, alt="", photoname=photo)
+            //- console.log(photosData) 
+            section#photo_popup 
+                img(src="", alt="")
+                div.photo_info
+                    h2 Title 
+                    p Description
+        script(src="js/home.js") 
+        //- _includes/footer.pug
