@@ -53,7 +53,7 @@ function createPhotoData(){
             photoData[photo].up
         }
     });
-    console.log(photoData);
+    // console.log(photoData);
     fs.writeFileSync('./js/imageData.json', JSON.stringify(photoData));
 }
 

@@ -1,4 +1,3 @@
-let photosData
 
 async function fetchPhotoData() {
     const response = await fetch('js/imageData.json');
@@ -16,6 +15,14 @@ photoPopup.addEventListener("click", () => {
     // alert("Clicked!");
     // photoPopup.classList.toggle("hide");
 });
+
+let photosData
+
+async function fetchPhotoData() {
+    const response = await fetch('js/imageData.json');
+    const jsonData = await response.json();
+    photosData = jsonData;
+};
 
 fetchPhotoData().then(() => {
     for(let photo in photosData)

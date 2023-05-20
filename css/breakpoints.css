@@ -12,6 +12,10 @@
     header > * {
         padding: 10px 0px; 
     }
+
+    .photos {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* up to 767px wide (phones in portrait mode) */
