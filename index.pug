@@ -6,17 +6,25 @@ html(lang="en")
     body 
         include _includes/header.pug
         main.home 
-            section.hero 
+            //- section.hero 
             section.photos
-                //- - let photos = fs.readdirSync('./img/home/');
                 each photo in Object.keys(photoData)
                     //- - console.log(photo)
                     img(src=`${photosPath}/${photo}`, alt="", photoname=photo)
+                //- div.photo_placeholder
+                    //- h2 ...
             //- console.log(photosData) 
-            section#photo_popup 
-                img(src="", alt="")
-                div.photo_info
-                    h2 Title 
-                    p Description
+            section.popup.hide
+                div#photo_popup
+                    img(src="", alt="")
+                    div.photo_info
+                        div
+                            h2 Title 
+                            p Description
+                        div.buttons
+                            button Back
+                            button Next
+                            button Close
+
         script(src="js/home.js") 
         //- _includes/footer.pug
