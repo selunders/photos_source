@@ -18,13 +18,13 @@ html(lang="en")
                 div#photo_popup
                     img(src="", alt="")
                     div.photo_info
-                        div
+                        div.photo_text
                             h2 Title 
                             p Description
                         div.buttons
                             button Back
                             button Next
-                            button Close
-
+                            button.ghost Close
+        include _includes/scripts.pug
         script(src="js/home.js") 
         //- _includes/footer.pug

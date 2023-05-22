@@ -10,19 +10,35 @@
     }
 
     header > * {
-        padding: 10px 0px; 
+        padding: 5px 0px; 
+    }
+
+    header h1 {
+        line-height: 1.2;
     }
 
     .photos {
         grid-template-columns: 1fr 1fr;
     }
+    h1 {
+        font-size: 7vw;
+    }
+
 }
 
 /* up to 767px wide (phones in portrait mode) */
 @media only screen and (max-width: 767px) {
+    .photo_info h2 {
+        font-size: 7vw;
+    }
     #photo_popup {
         grid:
             "a"
             "b";
-        }
+        padding: 0;
+    }
+    .photo_info {
+        padding: 20px 10px 20px 10px;
+        /* padding-right: 10px; */
+    }
 }
