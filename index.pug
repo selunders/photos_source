@@ -10,7 +10,7 @@ html(lang="en")
             section.photos
                 each photo in Object.keys(photoData)
                     //- - console.log(photo)
-                    img(src=`${photosPath}/${photo}`, alt="", photoname=photo)
+                    img(src=`${photosPath}/${photo}`, alt="", photoname=photo, tabindex=0)
                 //- div.photo_placeholder
                     //- h2 ...
             //- console.log(photosData) 
@@ -27,4 +27,4 @@ html(lang="en")
                             button.ghost Close
         include _includes/scripts.pug
         script(src="js/home.js") 
-        //- _includes/footer.pug
+        include _includes/footer.pug

@@ -28,6 +28,28 @@ fetchPhotoData().then(() => {
     photoElement.addEventListener("click", (e) => {
       selectPhoto(e.target);
     });
+    photoElement.addEventListener("keypress", (e) => {
+      if (e.code = "Enter")
+      {
+        e.preventDefault();
+        selectPhoto(e.target);
+      }
+    })
+    if(photosData[photo].isMe)
+    {
+      // alert("Hello");
+      anime({
+        targets: photoElement,
+        easing: "steps(1)",
+        direction: "alternate",
+        // opacity: 0,
+        scale: 1.05,
+        duration: 500,
+        // border: "3px solid white",
+        delay: 200,
+        complete: () => {photoElement.style.removeProperty("transform")}
+      });
+    };
   }
 });
 
@@ -69,14 +91,14 @@ const animateInPopup = () => {
     easing: "easeInOutSine",
     direction: "reverse",
     opacity: 0,
-    duration: 500,
+    duration: 300,
     begin: () => {
         photoPopup.classList.remove("hide");
     },
     });
 };
 
-const animateOutPopup = () =>
+const animateOutPopup = (element) =>
   anime({
     targets: "section.popup",
     easing: "easeInOutSine",
@@ -87,3 +109,14 @@ const animateOutPopup = () =>
       photoPopup.classList.add("hide");
     },
   });
+
+// anime({
+//   targets: "section.popup",
+//   easing: "easeInOutSine",
+//   direction: "reverse",
+//   opacity: 0,
+//   duration: 500,
+//   begin: () => {
+//     photoPopup.classList.remove("hide");
+//   },
+// });

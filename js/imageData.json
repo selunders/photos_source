@@ -3,7 +3,7 @@
     "title": "Orange Cat",
     "description": "Forgot I took this photo, happy with how it turned out. I believe this is the mother or sister of the kitten a couple photos over."
   },
-  "wTDY9yGRhI-600.webp": { "title": "Me!", "description": "Hey, thanks for checking out some of my photos! I made this site mostly to learn a bit of JS, but I wanted to show off a few of my photos as well😁." },
+  "wTDY9yGRhI-600.webp": { "title": "Me!", "description": "Hey, thanks for checking out some of my photos! I made this site mostly to learn a bit of JS, but I wanted to show off a few of my photos as well😁.", "isMe": true },
   "7DGYKSU2tb-600.webp": {
     "title": "Sleeping Kitten",
     "description": "A very cute kitten taking a nap."

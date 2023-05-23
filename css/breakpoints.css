@@ -1,6 +1,8 @@
-@media only screen and  (max-width: 1199px)
+@media only screen and  (max-width: 1499px)
 {
-
+    /* .photos {
+        grid-template-columns: repeat(3, 1fr);
+    } */
 }
 
 /* Screens 768px to 991px wide (phones in landscape mode, small tablets) */
